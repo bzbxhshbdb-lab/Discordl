@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire Max</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FFD700">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="panel">
+  <h1>Free Fire <span>Max</span></h1>
+  <p class="subtitle">ZXiter Trick</p>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="performance">Performance</button>
+    <button class="tab" data-tab="gameplay">Gameplay</button>
+    <button class="tab" data-tab="system">Sistema</button>
+  </div>
+
+  <!-- PERFORMANCE -->
+  <div class="content active" id="performance">
+    <label><input type="checkbox" data-key="antilag"> Anti-Lag</label>
+    <label><input type="checkbox" data-key="pingBoost"> Ping Melhorado</label>
+    <label><input type="checkbox" data-key="fpsBoost"> Otimização de FPS</label>
+    <label><input type="checkbox" data-key="reduceDelay"> Redução de Delay</label>
+    <label><input type="checkbox" data-key="lowLatency"> Baixa Latência</label>
+  </div>
+
+  <!-- GAMEPLAY -->
+  <div class="content" id="gameplay">
+    <label><input type="checkbox" data-key="aimAssist"> Assistência de Mira</label>
+    <label><input type="checkbox" data-key="weaponStability"> Estabilidade</label>
+    <label><input type="checkbox" data-key="dynamicPrecision"> Precisão</label>
+    <label><input type="checkbox" data-key="recoilControl"> Recuo</label>
+
+    <select id="target">
+      <option value="head">Cabeça</option>
+      <option value="neck">Pescoço</option>
+      <option value="body">Corpo</option>
+    </select>
+  </div>
+
+  <!-- SISTEMA -->
+  <div class="content" id="system">
+    <label><input type="checkbox" data-key="advancedSync"> Sincronização</label>
+    <label><input type="checkbox" data-key="smartCache"> Cache</label>
+    <label><input type="checkbox" data-key="processPriority"> Prioridade</label>
+    <label><input type="checkbox" data-key="debugMode"> Debug</label>
+  </div>
+
+  <button id="apply">APLICAR CONFIGURAÇÕES</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
