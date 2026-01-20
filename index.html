@@ -57,6 +57,28 @@
   <button id="apply">APLICAR CONFIGURAÇÕES</button>
 </div>
 
+<!-- 🔧 Bridge segura com Unity -->
+<script>
+  if (!window.Unity) {
+    window.Unity = {
+      call: function (data) {
+        console.log("Config enviada para Unity:", data);
+      }
+    };
+  }
+</script>
+
+<!-- Script principal -->
 <script src="script.js"></script>
+
+<!-- PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.log("SW erro:", err));
+  }
+</script>
+
 </body>
 </html>
